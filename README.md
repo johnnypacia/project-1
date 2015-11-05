@@ -26,4 +26,6 @@ List of technologies used:
 
  
 Description of your app (1 point)
+
+
 Link to your playable app deployed on Github Pages (1 point)

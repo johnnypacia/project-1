@@ -1,0 +1,24 @@
+
+body {
+  background-repeat: no-repeat;
+  width: 10000px;
+}
+
+.btn {
+  background: #d93455;
+  background-image: -webkit-linear-gradient(top, #d93455, #b8782b);
+  background-image: -moz-linear-gradient(top, #d93455, #b8782b);
+  background-image: -ms-linear-gradient(top, #d93455, #b8782b);
+  background-image: -o-linear-gradient(top, #d93455, #b8782b);
+  background-image: linear-gradient(to bottom, #d93455, #b8782b);
+  -webkit-border-radius: 22;
+  -moz-border-radius: 22;
+  border-radius: 22px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 28px;
+  padding: 7px;
+  border: solid #1f8c38 4px;
+  text-decoration: none;
+}
