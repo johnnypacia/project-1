@@ -6,15 +6,12 @@ body {
     max-height: 300px;
 }
 
-.on {
-  opacity: 1;
-  background-color: blue;
-}
 
 #color-box-container{
   width: 210px;
   height: 210px;
 }
+
 
 .box {
   width: 100px;
@@ -37,13 +34,13 @@ body {
 
 .purple {
   background: purple;
-  opacity: 0.2; 
+  opacity: 0.9; 
   float: right;
 }
 
 .brown {
-  background: brown;
-  opacity: 9.9; 
+  background-color: brown;
+  opacity: 0.9; 
   float: right;
 }
 
@@ -57,4 +54,9 @@ body {
   padding: 7px;
   border: solid #1f8c38 4px;
   text-decoration: none;
+}
+
+.black {
+  background-color: black;
+  opacity: 0.9; 
 }
