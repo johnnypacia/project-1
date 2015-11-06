@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LesPaulSimon</title>
+	<title>Simon</title>
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+<!-- 	// <script type="text/javascript" src="main.js"></script> -->
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<!-- GAME TITLE -->
-	<h1>SIMON</h1>
-	<!-- CONTAINER FOR COLOR-BOXES-->
-	<div id= "color-box-container">
-	<!-- COLOR-BOXES -->
-		<div class="orange box">
+	<div id = "container">
+		<!-- GAME TITLE -->
+		<h1>SIMON</h1>
+		<!-- CONTAINER FOR COLOR-BOXES-->
+		<div id= "color-box-container">
+		<!-- COLOR-BOXES -->
+			<div class="orange box">
+			</div>
+			<div id= "green" class="green box">
+			</div>
+			<div id= "purple" class="purple box">
+			</div>
+			<div id= "brown" class="brown box">
+			</div>
 		</div>
-		<div class="green box">
+		<!-- START BUTTON -->
+		<button id="btn">start</button>
+		<!-- SCORE COUNTER -->
+		<div id="score-counter">
 		</div>
-		<div class="purple box">
-		</div>
-		<div class= "brown box">
-		</div>
+		<script type="text/javascript" src="main.js"></script>
 	</div>
-	<!-- START BUTTON -->
-	<button class="btn">start</button>
-	<!-- SCORE COUNTER -->
-	<div id="score-counter">
-	</div>
-</body>
+	</body>
 </html>

@@ -1,18 +1,54 @@
 
 body {
-  background-repeat: no-repeat;
-  width: 10000px;
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
 }
 
-.btn {
+.on {
+  opacity: 1;
+  background-color: blue;
+}
+
+#color-box-container{
+  width: 210px;
+  height: 210px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  
+}
+
+.orange {
+  background: orange;
+  opacity: 0.8;
+  float: left;
+}
+
+.green {
+  background: green;
+  opacity: 0.9; 
+  float: left;
+}
+
+.purple {
+  background: purple;
+  opacity: 0.2; 
+  float: right;
+}
+
+.brown {
+  background: brown;
+  opacity: 9.9; 
+  float: right;
+}
+
+#btn {
   background: #d93455;
-  background-image: -webkit-linear-gradient(top, #d93455, #b8782b);
-  background-image: -moz-linear-gradient(top, #d93455, #b8782b);
-  background-image: -ms-linear-gradient(top, #d93455, #b8782b);
-  background-image: -o-linear-gradient(top, #d93455, #b8782b);
-  background-image: linear-gradient(to bottom, #d93455, #b8782b);
-  -webkit-border-radius: 22;
-  -moz-border-radius: 22;
   border-radius: 22px;
   text-shadow: 1px 1px 3px #666666;
   font-family: Georgia;
