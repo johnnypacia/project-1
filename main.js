@@ -6,6 +6,8 @@ var greenNote;
 var purpleNote;
 var brownNote;
 
+var computerMoves = [];
+
 // document.body.style.backgroundImage = "url('bassmanBackground.jpg')"
 	var startButton = document.querySelector('#btn');
 	var orangeNote = document.querySelector('.orange');
@@ -17,9 +19,12 @@ var brownNote;
 		if (event.target.id === "btn"){
 			//Computer to randomly select on of the boxes:
 			var blueNotes = [orangeNote, greenNote, purpleNote, brownNote];
-			var randomSelection = blueNotes[Math.floor(Math.random()*blueNotes.length)];
+			var randomIndex = Math.floor(Math.random()*blueNotes.length);
+			var randomSelection = blueNotes[randomIndex];
 				setTimeout(function(){randomSelection.classList.add("black");}, 500);
 				setTimeout(function(){randomSelection.classList.remove("black");}, 1000);
+				computerMoves.push(randomIndex);
+				console.log(computerMoves);
 				// randomSelection.style.backgroundColor = "blue";
 				console.log(randomSelection);
 		} else if (event.target.classList.contains("orange") === true){
