@@ -1,68 +1,113 @@
-console.log("Start it up, lads!")
+console.log("Start it up, lads!");
 
-var startButton;
-var orangeNote;
-var greenNote;
-var purpleNote;
-var brownNote;
 
+var startButton = document.querySelector('#btn');
+var orangeNote = document.querySelector('.orange');
+var greenNote = document.querySelector('.green');
+var purpleNote = document.querySelector('.purple');
+var brownNote = document.querySelector('.brown');  
 var computerMoves = [];
+var playerMoves = [];
 
-// document.body.style.backgroundImage = "url('bassmanBackground.jpg')"
-	var startButton = document.querySelector('#btn');
-	var orangeNote = document.querySelector('.orange');
-	var greenNote = document.querySelector('.green');
-	var purpleNote = document.querySelector('.purple');
-	var brownNote = document.querySelector('.brown');  
+var startItUp = function(event){
+	if (event.target.id === "btn"){
+		//Computer to randomly select one of the boxes:
+	var blueNotes = [orangeNote, greenNote, purpleNote, brownNote];
+	var randomIndex = Math.floor(Math.random()*blueNotes.length);
+	var randomSelection = blueNotes[randomIndex];
+		setTimeout(function(){
+			randomSelection.classList.add("black");
+		}, 500);
+		setTimeout(function(){
+			randomSelection.classList.remove("black");
+		}, 1000);
+	computerMoves.push(randomIndex);
+	console.log(computerMoves);
+	}
+}
 
-	var lightUp = function (event){
-		if (event.target.id === "btn"){
-			//Computer to randomly select on of the boxes:
-			var blueNotes = [orangeNote, greenNote, purpleNote, brownNote];
-			var randomIndex = Math.floor(Math.random()*blueNotes.length);
-			var randomSelection = blueNotes[randomIndex];
-				setTimeout(function(){randomSelection.classList.add("black");}, 500);
-				setTimeout(function(){randomSelection.classList.remove("black");}, 1000);
-				computerMoves.push(randomIndex);
-				console.log(computerMoves);
-				// randomSelection.style.backgroundColor = "blue";
-				console.log(randomSelection);
-		} else if (event.target.classList.contains("orange") === true){
-			console.log("ORANGE LIT");
-			setTimeout(function(){
-				orangeNote.classList.add("black");
-			}, 500);
-			setTimeout(function(){
-				orangeNote.classList.remove("black");
-			}, 1000);
-		} else if (event.target.classList.contains("green") === true){
-			console.log("GREEN LIT");
-			setTimeout(function(){
-				greenNote.classList.add("black");
-			}, 500);
-			setTimeout(function(){greenNote.classList.remove("black");}, 1000);
-		} else if (event.target.classList.contains("purple") === true){
-			console.log("PURPLE LIT");
-			setTimeout(function(){
-				purpleNote.classList.add("black");
-			}, 500);
-			setTimeout(function(){
-				purpleNote.classList.remove("black");
-			}, 1000);
-		} else {
-			console.log("BROWN LIT");
-			setTimeout(function(){
-				brownNote.classList.add("black");
-			}, 500);
-			setTimeout(function(){brownNote.classList.remove("black");}, 1000);
-		}
-	};
+startButton.addEventListener('click', startItUp);
 
-startButton.addEventListener('click', lightUp);
-orangeNote.addEventListener('click', lightUp);
-greenNote.addEventListener('click', lightUp);
-purpleNote.addEventListener('click', lightUp);
-brownNote.addEventListener('click', lightUp);
+var lightItUp= function(event){
+	if (event.target.classList.contains("orange") === true){
+		setTimeout(function(){
+			orangeNote.classList.add("black");
+		}, 500);
+		setTimeout(function(){
+			orangeNote.classList.remove("black");
+		}, 1000);
+		playerMoves.push(0);
+		console.log(playerMoves);
+	} else if (event.target.classList.contains("green") === true){
+		setTimeout(function(){
+			greenNote.classList.add("black");
+		}, 500);
+		setTimeout(function(){
+			greenNote.classList.remove("black");
+		}, 1000);
+		playerMoves.push(1);
+		console.log(playerMoves);
+	} else if (event.target.classList.contains("purple") === true){
+		setTimeout(function(){
+			purpleNote.classList.add("black");
+		}, 500);
+		setTimeout(function(){
+			purpleNote.classList.remove("black");
+		}, 1000);
+		playerMoves.push(2);
+		console.log(playerMoves);
+	} else {			
+		setTimeout(function(){
+			brownNote.classList.add("black");
+		}, 500);
+		setTimeout(function(){
+			brownNote.classList.remove("black");
+		}, 1000);
+		playerMoves.push(3);
+		console.log(playerMoves);
+	}
+}
+
+orangeNote.addEventListener('click', lightItUp);
+greenNote.addEventListener('click', lightItUp);
+purpleNote.addEventListener('click', lightItUp);
+brownNote.addEventListener('click', lightItUp);
+
+
+//STACK OVERFLOW: 
+//http://stackoverflow.com/questions/22395357/how-to-compare-two-arrays-are-equal-using-javascript-or-jquery
+
+var doTheyMatch=function (arr1, arr2){
+	    if (computerMoves.length !== playerMoves.length) {
+	    	return false;
+	    }
+	    for (var i = 0, length = computerMoves.length; i < length; i++){
+	        if (computerMoves[i] !== playerMoves[i]){
+	            return false;
+	        }
+	    } return true; 
+	}
+
+
+var playAgain = function () {
+	if (doTheyMatch === false) {
+	document.querySelector('#play-again');
+	document.createElement('h1');
+	document.textContent('Press START to play again!');
+	document.body.appendChild(playAgain);
+}
+}
+
+playAgain();
+
+// function nextRound() {
+// 	if (doTheyMatch === false) {
+// 		window.alert("Press START to play again!");
+// 	}
+
+// }
+
+// window.nextRound(doTheyMatch); 
 
 
 
