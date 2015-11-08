@@ -33,6 +33,7 @@ var lightItUp= function(event){
 		setTimeout(function(){
 			orangeNote.classList.add("black");
 		}, 500);
+			document.getElementById('orange-note').play();
 		setTimeout(function(){
 			orangeNote.classList.remove("black");
 		}, 1000);
@@ -42,6 +43,7 @@ var lightItUp= function(event){
 		setTimeout(function(){
 			greenNote.classList.add("black");
 		}, 500);
+			document.getElementById('green-note').play();
 		setTimeout(function(){
 			greenNote.classList.remove("black");
 		}, 1000);
@@ -51,6 +53,7 @@ var lightItUp= function(event){
 		setTimeout(function(){
 			purpleNote.classList.add("black");
 		}, 500);
+			document.getElementById('purple-note').play();
 		setTimeout(function(){
 			purpleNote.classList.remove("black");
 		}, 1000);
@@ -60,6 +63,7 @@ var lightItUp= function(event){
 		setTimeout(function(){
 			brownNote.classList.add("black");
 		}, 500);
+		document.getElementById('brown-note').play();
 		setTimeout(function(){
 			brownNote.classList.remove("black");
 		}, 1000);
