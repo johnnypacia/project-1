@@ -1,3 +1,6 @@
+#game-title {
+  font-family: 'Nunito', sans-serif;
+}
 
 h1 {
   color: white;
@@ -5,11 +8,10 @@ h1 {
 
 body {
     background-image: url('bassmanBackground.jpg');
-    background-repeat: off;
     height: auto; 
     width: auto; 
-    max-width: 3000px; 
-    max-height: 3000px;
+   /* max-width: 3000px; 
+    max-height: 3000px;*/
     text-align: center;
 }
 
@@ -17,7 +19,7 @@ body {
 #color-box-container{
   width: 210px;
   height: 210px;
-  
+
 
 }
 
@@ -45,20 +47,20 @@ body {
 .purple {
   background: purple;
   opacity: 0.9; 
-  float: right;
+  float: left;
 }
 
 .brown {
   background-color: brown;
   opacity: 0.9; 
-  float: right;
+  float: left;
 }
 
 #btn {
   background: #d93455;
   border-radius: 22px;
   text-shadow: 1px 1px 3px #666666;
-  font-family: Georgia;
+  font-family: 'Nunito', sans-serif;
   color: #ffffff;
   font-size: 28px;
   padding: 7px;

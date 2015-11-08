@@ -88,26 +88,23 @@ var doTheyMatch=function (arr1, arr2){
 	    } return true; 
 	}
 
+// var noTheyDont = function (){
+//  if (doTheyMatch == false) {
+// window.alert('ADFJAKSJDF');
+// }}
 
-var playAgain = function () {
-	if (doTheyMatch === false) {
-	document.querySelector('#play-again');
-	document.createElement('h1');
-	document.textContent('Press START to play again!');
-	document.body.appendChild(playAgain);
-}
-}
 
-playAgain();
+// var killScreen = document.querySelector('#play-again');
 
-// function nextRound() {
+
+// var playAgain = function () {
 // 	if (doTheyMatch === false) {
-// 		window.alert("Press START to play again!");
-// 	}
-
+// 	document.querySelector('#play-again');
+// 	document.createElement('h1');
+// 	killScreen.textContent('Press START to play again!');
+// 	document.body.appendChild(playAgain);
 // }
-
-// window.nextRound(doTheyMatch); 
+// }
 
 
 
