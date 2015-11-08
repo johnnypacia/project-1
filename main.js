@@ -15,12 +15,39 @@ var startItUp = function(event){
 	var blueNotes = [orangeNote, greenNote, purpleNote, brownNote];
 	var randomIndex = Math.floor(Math.random()*blueNotes.length);
 	var randomSelection = blueNotes[randomIndex];
-		setTimeout(function(){
-			randomSelection.classList.add("black");
-		}, 500);
-		setTimeout(function(){
+		if (randomSelection === blueNotes[0]){
+			setTimeout(function(){
+				randomSelection.classList.add("black");
+			}, 500);
+			document.getElementById('orange-note').play();
+			setTimeout(function(){
 			randomSelection.classList.remove("black");
-		}, 1000);
+			}, 1000);
+		} else if (randomSelection === blueNotes[1]){
+			setTimeout(function(){
+				randomSelection.classList.add("black");
+			}, 500);
+			document.getElementById('green-note').play();
+			setTimeout(function(){
+			randomSelection.classList.remove("black");
+			}, 1000);
+		} else if (randomSelection === blueNotes[2]){
+			setTimeout(function(){
+				randomSelection.classList.add("black");
+			}, 500);
+			document.getElementById('purple-note').play();
+			setTimeout(function(){
+			randomSelection.classList.remove("black");
+			}, 1000);
+		} else {
+			setTimeout(function(){
+				randomSelection.classList.add("black");
+			}, 500);
+			document.getElementById('brown-note').play();
+			setTimeout(function(){
+			randomSelection.classList.remove("black");
+			}, 1000);
+		}	
 	computerMoves.push(randomIndex);
 	console.log(computerMoves);
 	}
