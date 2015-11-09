@@ -1,18 +1,18 @@
 # project-1
-Simon Says
+Simon Strums
 
 
 User Story: 
 
--when page loads User should see the board with 4 colors-boxes (not illuminated), a start button, and a score counter set at 0
+-When page loads User sees the board with 4 colors-boxes, a start button, and a score counter set at 0
 
--When user presses start, computer will randomly light up one of the colors for less than a second (AND may play a custom-built sound??)
+-When user presses start, computer randomly selects one of the boxes, flashes an image, and plays the corresponding custom-built sound clip for the selected box.
 
--User should be able to click any color-box and in doing so illuminate the box
+-User can then click on any color-box and in doing so flash the image and play the corresponding sound clip. 
 
--If the box clicked matches the box the computer randomly illuminated, move on to next round, increase score counter by 1
+-If the box clicked matches the box the computer randomly illuminated, user moves on to next round and score increases by 1.
 
--If the box clicked does not match, then user should be notified the game is over
+-If the box clicked does not match, user is instructed to play again. 
 
 -If player moves on to next round [round 2], computer should light up two boxes in sequence
 

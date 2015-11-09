@@ -2,20 +2,22 @@
 
 /* MDN article on Media Queries:
 https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries*/
+/*MDN article on scaling background images: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images#Special_values.3A_.22contain.22_and_.22cover.22
+*/
 
 @media screen and (min-width: 1000px) {
 
 body {
     background: url('bassmanBackground.jpg') no-repeat;
-   /* background-attachment: fixed;*/
+    background-attachment: fixed;
     background-position: 30% 20%;
+    background-size: cover;
     font-family: 'Nunito', sans-serif;200
     height: 100%; 
     width: 100%; 
     text-align: center;
-    /*position: absolute;*/
+    position: absolute;
 }
-
   
 #color-box-container{
   background-image: url('toneKnob.jpg');
@@ -43,13 +45,14 @@ body {
 
 body {
     background: url('bassmanBackground.jpg') no-repeat;
-    /*background-attachment: fixed;*/
+    background-attachment: fixed;
     background-position: 30% 20%;
+    background-size: cover;
     font-family: 'Nunito', sans-serif;200
     height: 100%; 
     width: 100%; 
     text-align: center;
-   /* position: absolute;*/
+    position: absolute;
 }
 
 
@@ -89,39 +92,7 @@ body {
 
 h1 {
   color: white;
-  border: dotted;
 }
-
-/*body {
-    background: url('bassmanBackground.jpg') no-repeat;
-    background-attachment: fixed;
-    background-position: 30% 20%;
-    font-family: 'Nunito', sans-serif;200
-    height: 100%; 
-    width: 100%; 
-    text-align: center;
-    position: absolute;
-}*/
-
-
-/*#color-box-container{
-   background-image: url('toneKnob.jpg');
-  height: 210px;
-  width: 90%;
-  margin: auto;
-
-}
-
-.box {
-  position: relative;
-  width: 200px;
-  height: 150px;
-  margin: 20px 0;
-  border-radius: 50% / 10%;
-  text-align: center;
-  text-indent: .1em;
-  opacity: 0.9;
-}*/
 
 .orange {
   background: orange;

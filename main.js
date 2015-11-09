@@ -128,19 +128,9 @@ var doTheyMatch=function (arr1, arr2){
 	            return false;
 	        }
 	    } return true;
-	    }
+		}
 
-
-
-var isGameActive = true; 
-		  while(isGameActive) {
-		if (doTheyMatch(computerMoves, playerMoves) === true) {
-
-			score ++;
-			displayScore(); 
- 	} else playAgain();
-} 
-
+doTheyMatch(computerMoves, playerMoves);
 
 // PHIL'S SUGGESTION: 
 //var isGameActive = true; 
