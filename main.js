@@ -8,6 +8,8 @@ var purpleNote = document.querySelector('.purple');
 var brownNote = document.querySelector('.brown');  
 var computerMoves = [];
 var playerMoves = [];
+var score = 0;
+
 
 var startItUp = function(event){
 	if (event.target.id === "btn"){
@@ -50,7 +52,7 @@ var startItUp = function(event){
 		}	
 	computerMoves.push(randomIndex);
 	console.log(computerMoves);
-	}
+	} 
 }
 
 startButton.addEventListener('click', startItUp);
@@ -105,37 +107,47 @@ purpleNote.addEventListener('click', lightItUp);
 brownNote.addEventListener('click', lightItUp);
 
 
-//STACK OVERFLOW: 
-//http://stackoverflow.com/questions/22395357/how-to-compare-two-arrays-are-equal-using-javascript-or-jquery
+// STACK OVERFLOW: 
+// http://stackoverflow.com/questions/22395357/how-to-compare-two-arrays-are-equal-using-javascript-or-jquery
+
+
+var displayScore = function (){
+	document.querySelector('.score-counter').textContent='SCORE: ' + score;
+}
+
+var playAgain = function () {
+	document.querySelector('.play-again').textContent='Press START to play again!';
+}
 
 var doTheyMatch=function (arr1, arr2){
-	    if (computerMoves.length !== playerMoves.length) {
+	    if (arr1.length !== arr2.length) {
 	    	return false;
 	    }
-	    for (var i = 0, length = computerMoves.length; i < length; i++){
-	        if (computerMoves[i] !== playerMoves[i]){
+	    for (var i = 0, length = arr1.length; i < length; i++){
+	        if (arr1[i] !== arr2[i]){
 	            return false;
 	        }
-	    } return true; 
-	}
-
-// var noTheyDont = function (){
-//  if (doTheyMatch == false) {
-// window.alert('ADFJAKSJDF');
-// }}
+	    } return true;
+	    }
 
 
-// var killScreen = document.querySelector('#play-again');
+
+var isGameActive = true; 
+		  while(isGameActive) {
+		if (doTheyMatch(computerMoves, playerMoves) === true) {
+
+			score ++;
+			displayScore(); 
+ 	} else playAgain();
+} 
 
 
-// var playAgain = function () {
-// 	if (doTheyMatch === false) {
-// 	document.querySelector('#play-again');
-// 	document.createElement('h1');
-// 	killScreen.textContent('Press START to play again!');
-// 	document.body.appendChild(playAgain);
+// PHIL'S SUGGESTION: 
+//var isGameActive = true; 
+// while (isGameActive) {
+//   // whatever code 
+//   isGameActive = doTheyMatch(computerMoves, playerMoves);
 // }
-// }
-
+// gameOver() // some function that resets the game state and changes the DOM to say "play again"
 
 
