@@ -53,7 +53,7 @@ var startItUp = function(event){
 	computerMoves.push(randomIndex);
 	console.log(computerMoves);
 	} 
-}
+};
 
 startButton.addEventListener('click', startItUp);
 
@@ -99,12 +99,13 @@ var lightItUp= function(event){
 		playerMoves.push(3);
 		console.log(playerMoves);
 	}
-}
+};
 
 orangeNote.addEventListener('click', lightItUp);
 greenNote.addEventListener('click', lightItUp);
 purpleNote.addEventListener('click', lightItUp);
 brownNote.addEventListener('click', lightItUp);
+
 
 
 // STACK OVERFLOW: 
@@ -113,11 +114,11 @@ brownNote.addEventListener('click', lightItUp);
 
 var displayScore = function (){
 	document.querySelector('.score-counter').textContent='SCORE: ' + score;
-}
+};
 
 var playAgain = function () {
 	document.querySelector('.play-again').textContent='Press START to play again!';
-}
+};
 
 var doTheyMatch=function (arr1, arr2){
 	    if (arr1.length !== arr2.length) {
@@ -128,7 +129,7 @@ var doTheyMatch=function (arr1, arr2){
 	            return false;
 	        }
 	    } return true;
-		}
+		};
 
 doTheyMatch(computerMoves, playerMoves);
 
